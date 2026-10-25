@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#0b0c0e"/>
+  <rect x="24" y="24" width="464" height="464" rx="96" fill="none" stroke="#1c1f24" stroke-width="8"/>
+  <!-- dumbbell -->
+  <g stroke-linecap="round">
+    <line x1="150" y1="256" x2="362" y2="256" stroke="#8d939e" stroke-width="22"/>
+    <rect x="96" y="176" width="54" height="160" rx="14" fill="#2f8cff"/>
+    <rect x="362" y="176" width="54" height="160" rx="14" fill="#2f8cff"/>
+    <rect x="60" y="206" width="36" height="100" rx="10" fill="#1d5fb4"/>
+    <rect x="416" y="206" width="36" height="100" rx="10" fill="#1d5fb4"/>
+  </g>
+  <circle cx="256" cy="256" r="22" fill="#b4ff3a"/>
+</svg>

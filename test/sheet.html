@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{background:#111;color:#ddd;font:12px system-ui;margin:0;padding:10px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.card{background:#1a1a1a;border:1px solid #333;padding:4px}
+.card h4{margin:0 0 2px;font-size:11px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row{display:flex;gap:2px}
+.row svg{width:100%;height:auto;background:#141414}
+.rg-floor{stroke:#555}.rg-scene{fill:#3a3a3a}.rg-scene-l{stroke:#3a3a3a}.rg-metal{fill:#8a8a8a}.rg-metal-l{stroke:#8a8a8a}
+.rg-limb{stroke:#cfcfcf}.rg-hl{stroke:#2f8cff}.rg-head{fill:#cfcfcf}.rg-joint{fill:#9a9a9a}.rg-joint.rg-hl{fill:#2f8cff}
+.rg-far .rg-limb{stroke:#777}.rg-far .rg-hl{stroke:#1f5aa8}
+.rg-plate{fill:#555;stroke:#8a8a8a;stroke-width:1}.rg-cable{stroke:#aaa}.rg-roller{fill:#444;stroke:#8a8a8a}
+.rg-path{stroke:#b4ff3a}.rg-path-a{fill:#b4ff3a}.rg-path-b{fill:#ff6b6b}
+</style></head><body><div class="grid" id="g"></div>
+<script src="../src/exercises.js"></script><script src="../src/rig.js"></script>
+<script>
+const g=document.getElementById('g');
+for(const ex of EX.list){const c=document.createElement('div');c.className='card';c.innerHTML='<h4>'+ex.id+' · '+ex.demo.rig+'</h4>';const r=document.createElement('div');r.className='row';c.appendChild(r);g.appendChild(c);
+ for(const s of [0,.5,1]){const h=document.createElement('div');h.style.width='33%';r.appendChild(h);const a=Rig.mount(h,ex,{autoplay:false});a.scrub(s);}}
+</script></body></html>
